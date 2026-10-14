@@ -1,0 +1,131 @@
+{
+  "entries": [
+    {
+      "entry_id": 20992,
+      "entry_version": 2,
+      "input_files": [
+        {
+          "downloadCount": 1,
+          "eTag": "860f726bb8199d21f8ade572c041a72c-21",
+          "fileFormat": "GLB",
+          "fileId": 2107999,
+          "fileSize": 211624968,
+          "fileType": "InputMesh",
+          "metadata": {
+            "animated": false,
+            "edges_non_manifold": 0,
+            "intersections": null,
+            "is_watertight": true,
+            "label": "hra-reference-organ-united-female-v1.5.glb",
+            "materials": true,
+            "optimizedFor3DPrinting": false,
+            "polyCount": 16724,
+            "rigged": false,
+            "textureMaps": false,
+            "uvMapped": false,
+            "vertexColor": true,
+            "vertexCount": 8362
+          },
+          "name": "3d-vh-f-united.glb",
+          "s3Location": "https://nih3d-v2-data-cln-media-prod.s3.amazonaws.com/2107999/3d-vh-f-united.glb",
+          "uploadDate": "2026-10-08T19:54:01.724Z"
+        }
+      ],
+      "license_hyperlink": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata": {
+        "attributionInstructions": "<p>Kristen Browne; Heidi Schlehlein. 2023. <em>3D Reference Organ Set for Female, v1.5.</em>, <a href=\"https://doi.org/10.48539/HBM352.BTSQ.586\" rel=\"noopener noreferrer\" target=\"_blank\">https://doi.org/10.48539/HBM352.BTSQ.586</a>. Accessed on December 15, 2023.</p>",
+        "license": "CC-BY",
+        "meshRepairModel": false,
+        "outputPrint": false,
+        "title": "Body, Female"
+      },
+      "published_on": "2026-10-08T19:59:16.715Z",
+      "submission_id": 43503
+    },
+    {
+      "entry_id": 20986,
+      "entry_version": 3,
+      "input_files": [
+        {
+          "downloadCount": 0,
+          "eTag": "9586bb802e1ee43c0e09ddbf25b7b7f0-2",
+          "fileFormat": "GLB",
+          "fileId": 2107983,
+          "fileSize": 16003176,
+          "fileType": "InputMesh",
+          "metadata": {
+            "animated": false,
+            "edges_non_manifold": 0,
+            "intersections": 261439,
+            "is_watertight": true,
+            "label": "3d-vh-f-skin",
+            "materials": true,
+            "optimizedFor3DPrinting": false,
+            "polyCount": 266696,
+            "rigged": false,
+            "textureMaps": false,
+            "uvMapped": false,
+            "vertexColor": false,
+            "vertexCount": 533392
+          },
+          "name": "3d-vh-f-skin.glb",
+          "s3Location": "https://nih3d-v2-data-cln-media-prod.s3.amazonaws.com/2107983/3d-vh-f-skin.glb",
+          "uploadDate": "2026-10-08T19:53:47.575Z"
+        }
+      ],
+      "license_hyperlink": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata": {
+        "attributionInstructions": "<p>Kristen Browne; Heidi Schlehlein 2022. <em>3D Reference Organ for Skin, Female v1.3</em>, <a href=\"https://doi.org/10.48539/HBM466.LKPQ.876\" rel=\"noopener noreferrer\" target=\"_blank\">https://doi.org/10.48539/HBM466.LKPQ.876</a>. Accessed on December 15, 2022.</p>",
+        "license": "CC-BY",
+        "meshRepairModel": false,
+        "outputPrint": false,
+        "title": "Skin, Female"
+      },
+      "published_on": "2026-10-08T19:58:21.793Z",
+      "submission_id": 43497
+    },
+    {
+      "entry_id": 20984,
+      "entry_version": 2,
+      "input_files": [
+        {
+          "downloadCount": 3,
+          "eTag": "639ab3f6cc0b9ff0c54b7546ed8392d9",
+          "fileFormat": "GLB",
+          "fileId": 2107981,
+          "fileSize": 1593336,
+          "fileType": "InputMesh",
+          "metadata": {
+            "animated": false,
+            "edges_non_manifold": 0,
+            "intersections": 0,
+            "is_watertight": true,
+            "label": "hra-reference-organ-pelvis-female-v1.2.glb",
+            "materials": true,
+            "optimizedFor3DPrinting": false,
+            "polyCount": 2296,
+            "rigged": false,
+            "textureMaps": false,
+            "uvMapped": false,
+            "vertexColor": false,
+            "vertexCount": 1198
+          },
+          "name": "VH_F_Pelvis.glb",
+          "s3Location": "https://nih3d-v2-data-cln-media-prod.s3.amazonaws.com/2107981/VH_F_Pelvis.glb",
+          "uploadDate": "2026-10-08T19:53:43.580Z"
+        }
+      ],
+      "license_hyperlink": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata": {
+        "attributionInstructions": "<p>Kristen Browne; Heidi Schlehlein. 2022. <em>3D Reference Organ for Pelvis, Female v1.2. </em><a href=\"https://doi.org/10.48539/HBM427.CCRP.887\">https://doi.org/10.48539/HBM427.CCRP.887</a>. Accessed on May 6, 2022.</p>",
+        "license": "CC-BY",
+        "meshRepairModel": false,
+        "outputPrint": false,
+        "title": "Pelvis, Female"
+      },
+      "published_on": "2026-10-08T19:58:33.648Z",
+      "submission_id": 43495
+    }
+  ],
+  "retrieved_on": "2026-10-12"
+}
