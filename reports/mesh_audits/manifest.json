@@ -1,0 +1,10 @@
+{
+  "catalog_sha256": "e2458c8d5d818841a48d7f3309593f6340b62d83e7e02e973f9af9fcb74023d9",
+  "fabrication_released": false,
+  "files": {
+    "3d-vh-f-skin.json": "0207e245ceec6838c05e066b6624ac15b63110f92607b6357dfed3edbe8ed6c1",
+    "3d-vh-f-united.json": "0799b92d4db0e761d5e2c91700e759ef9deadbeba02a0e8d4195386dbf7b48fd",
+    "VH_F_Pelvis.json": "5d10bfa11a756c05714696657428f80e0eb539a3273d7e567b86b1503990be4f"
+  },
+  "version": "1.0.0"
+}

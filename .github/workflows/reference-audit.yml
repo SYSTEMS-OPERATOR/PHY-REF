@@ -1,0 +1,50 @@
+name: Reference integrity and geometry
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: phy-ref-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  references:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Contract and malformed-input tests
+        run: python -m unittest discover -s tests -v
+      - name: Materialize the three pinned originals
+        run: |
+          git lfs install --local
+          python tools/acquire_nih.py --all
+      - name: Independently check hashes and static geometry
+        run: |
+          python tools/audit_assets.py --output /tmp/phy-ref-audits
+          diff -qr reports/mesh_audits /tmp/phy-ref-audits
+      - name: Retain verified originals in this repository's LFS storage
+        if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git add -- assets/nih/originals/*.glb
+          git diff --cached --exit-code
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          assets = json.loads(Path('sources/reference_assets.json').read_text())['assets']
+          subprocess.run(['git', 'lfs', 'push', '--object-id', 'origin',
+                          *[asset['sha256'] for asset in assets]], check=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reference-geometry-audits
+          path: /tmp/phy-ref-audits
