@@ -35,8 +35,16 @@ jobs:
         run: |
           git add -- assets/nih/originals/*.glb
           git diff --cached --exit-code
-          git lfs push origin HEAD
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          assets = json.loads(Path('sources/reference_assets.json').read_text())['assets']
+          subprocess.run(['git', 'lfs', 'push', '--object-id', 'origin',
+                          *[asset['sha256'] for asset in assets]], check=True)
+          PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: reference-geometry-audits
           path: /tmp/phy-ref-audits
