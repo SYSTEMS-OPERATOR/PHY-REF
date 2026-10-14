@@ -22,6 +22,8 @@ jobs:
           python-version: '3.12'
       - name: Contract and malformed-input tests
         run: python -m unittest discover -s tests -v
+      - name: Verify pending landmark packet without promoting geometry
+        run: python tools/validate_landmark_review.py
       - name: Materialize the three pinned originals
         run: |
           git lfs install --local
