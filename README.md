@@ -76,3 +76,12 @@ by default.
 NASA PDFs remain in PHY under the existing decision. PHY-REF owns NIH binaries,
 derivatives and provenance. PHY should pin a reviewed commit and annotate
 landmarks before adopting embodiment inputs.
+
+## Pending sacrum–left hemipelvis review
+
+`reviews/pelvis_left_landmarks.json` and `reviews/PELVIS_LEFT_REVIEW.md` define
+five candidate features, original/preview custody and independent review gates.
+Accepted points, metric calibration, tolerances and registration remain null.
+Studio may capture unaccepted preview points; validate their geometric lineage
+offline with `python tools/validate_landmark_review.py --draft /path/to/draft.json`.
+This is not anatomical acceptance or fabrication qualification.

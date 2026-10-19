@@ -1,0 +1,157 @@
+{
+  "schema_version": "PHY_PELVIS_LANDMARK_REVIEW_V1",
+  "packet_id": "NIH_PELVIS_LEFT_REVIEW_01",
+  "status": "awaiting_independent_review",
+  "reference_baseline_revision": "eaf86d4237b57a0e096c514f74fbca5a9da697df",
+  "scope": [
+    "BONE_SACRUM",
+    "BONE_HIP_L"
+  ],
+  "units": "m",
+  "coordinate_frame": "source world Y-up, unchanged",
+  "source": {
+    "asset_id": "NIH_3DPX_020984",
+    "path": "assets/nih/originals/VH_F_Pelvis.glb",
+    "sha256": "155603d0c44a8ed1e0ca307f1ec3037941304f29f4187631135a9a150fab048d",
+    "bytes": 1593336,
+    "entry_version": 2,
+    "reference_object_version": "1.2",
+    "entry_url": "https://3d.nih.gov/entries/3DPX-020984",
+    "attribution": "Kristen Browne; Heidi Schlehlein. 2022. 3D Reference Organ for Pelvis, Female v1.2. https://doi.org/10.48539/HBM427.CCRP.887. Accessed on May 6, 2022.",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "preview": {
+    "path": "assets/nih/derived/pelvis-preview.glb",
+    "sha256": "c619c5fd8aefb971f9fd036b2f26e5809e0c102ddf8ba37474d33a84c52d9f49",
+    "bytes": 373404,
+    "qualification": "display-only; samples are not a global error bound or landmark qualification",
+    "recipe": "exact point weld; VTK quadric decimation with volume preservation; no registration/rescaling"
+  },
+  "custody_files": {
+    "sources/reference_assets.json": "e2458c8d5d818841a48d7f3309593f6340b62d83e7e02e973f9af9fcb74023d9",
+    "assets/nih/derived/derivative_manifest.json": "33c182cd5b0b9cb611f3415c19f7094a5e368ccbe547153af5e52399975ddfa8"
+  },
+  "definition_sources": [
+    {
+      "id": "OPENSTAX_PELVIS_8_3",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-3-the-pelvic-girdle-and-pelvis",
+      "role": "Anatomical feature definitions only; no numerical osteometry or image reproduction"
+    },
+    {
+      "id": "OPENSTAX_SPINE_7_3",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "role": "Sacral promontory definition only"
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "L_ASIS",
+      "canonical_identity_for_review": "BONE_HIP_L",
+      "label": "Anterior superior iliac spine",
+      "preview_mesh_names": [
+        "VH_F_ilium_compact_bone_L"
+      ],
+      "definition": "Anterior end of the left iliac crest, where it forms the anterior superior iliac spine.",
+      "review_rule": "Review the original cortical surface in multiple views; record the selected tip and the local crest patch. A coordinate extremum alone cannot identify it.",
+      "definition_source": "OPENSTAX_PELVIS_8_3",
+      "accepted_native_point_m": null,
+      "anatomically_accepted": false
+    },
+    {
+      "id": "L_PSIS",
+      "canonical_identity_for_review": "BONE_HIP_L",
+      "label": "Posterior superior iliac spine",
+      "preview_mesh_names": [
+        "VH_F_ilium_compact_bone_L"
+      ],
+      "definition": "Posterior end of the left iliac crest, where it forms the posterior superior iliac spine.",
+      "review_rule": "Distinguish the posterior superior spine from the posterior inferior spine and sacral surface. Review the original crest patch.",
+      "definition_source": "OPENSTAX_PELVIS_8_3",
+      "accepted_native_point_m": null,
+      "anatomically_accepted": false
+    },
+    {
+      "id": "L_PUBIC_TUBERCLE",
+      "canonical_identity_for_review": "BONE_HIP_L",
+      "label": "Pubic tubercle",
+      "preview_mesh_names": [
+        "VH_F_pubis_compact_bone_L"
+      ],
+      "definition": "Raised feature on the superior portion of the left pubic body near the medial end of the superior pubic ramus.",
+      "review_rule": "Review the small feature on the original surface; define the selected apex and distinguish the pubic crest and symphyseal face.",
+      "definition_source": "OPENSTAX_PELVIS_8_3",
+      "accepted_native_point_m": null,
+      "anatomically_accepted": false
+    },
+    {
+      "id": "L_ISCHIAL_TUBEROSITY",
+      "canonical_identity_for_review": "BONE_HIP_L",
+      "label": "Ischial tuberosity",
+      "preview_mesh_names": [
+        "VH_F_ischium_compact_bone_L"
+      ],
+      "definition": "Roughened prominence on the inferior portion of the left ischium.",
+      "review_rule": "This is a broad region rather than a unique point. Review and record a surface patch and an explicit point selection rule before acceptance; do not use the lowest bounding-box point by default.",
+      "definition_source": "OPENSTAX_PELVIS_8_3",
+      "accepted_native_point_m": null,
+      "anatomically_accepted": false
+    },
+    {
+      "id": "SACRAL_PROMONTORY",
+      "canonical_identity_for_review": "BONE_SACRUM",
+      "label": "Sacral promontory",
+      "preview_mesh_names": [
+        "VH_F_sacrum"
+      ],
+      "definition": "Anterior lip of the superior sacral base forming the posterior part of the pelvic brim.",
+      "review_rule": "Review the anterior superior rim on the original sacrum and define a midline point using a reviewed median-plane construction. Resolve the source lumbar-6 context before any spinal interface adoption.",
+      "definition_source": "OPENSTAX_SPINE_7_3",
+      "accepted_native_point_m": null,
+      "anatomically_accepted": false
+    }
+  ],
+  "crosswalk": {
+    "BONE_SACRUM": [
+      "VH_F_sacrum"
+    ],
+    "BONE_HIP_L": [
+      "VH_F_pubis_spongy_bone_L",
+      "VH_F_pubis_compact_bone_L",
+      "VH_F_ilium_compact_bone_L",
+      "VH_F_ilium_spongy_bone_L",
+      "VH_F_ischium_compact_bone_L",
+      "VH_F_ischium_spongy_bone_L"
+    ]
+  },
+  "required_evidence": {
+    "independent_annotator_A": null,
+    "independent_annotator_B": null,
+    "original_surface_face_or_patch_lineage": null,
+    "metric_calibration_evidence": null,
+    "segmentation_review": null,
+    "native_axis_anatomical_review": null,
+    "repeatability_error_mm": null,
+    "segmentation_uncertainty_mm": null,
+    "approved_feature_tolerance_mm": null,
+    "registration_residual_limit_mm": null,
+    "registration_residuals_mm": null,
+    "review_decision": null
+  },
+  "go_criteria": [
+    "Two independent reviewers identify the same anatomical features on the pinned original surface and record original node, primitive, face or patch, vertex indices and native coordinates.",
+    "A reviewer establishes a metric calibration argument and segmentation limitations for this exact original. glTF meter encoding alone is not metric qualification.",
+    "SYSOP approves point or patch definitions and a fit-for-purpose numerical error budget before any acceptance or registration.",
+    "Any later rigid registration uses at least four reviewed noncoplanar correspondences, records conditioning and residuals against the approved budget, and leaves SOPHY 1.0.0 unchanged until a separately reviewed embodiment decision."
+  ],
+  "stop_criteria": [
+    "Unresolvable feature or insufficient original segmentation",
+    "Unknown metric fidelity or disagreement exceeding the approved budget",
+    "Mapping lumbar-6 into the five-lumbar canon without review",
+    "Treating draft points, sampled decimation error or an exterior skin surface as qualified osteometry"
+  ],
+  "nasa_role": "Use the existing PHY NASA positioning/range catalog for posture, measurement-frame and operating-condition comparison. It cannot locate these bone features, supply missing osteometry, or establish mechanical limits or NASA compliance.",
+  "accepted_landmarks": null,
+  "canonical_transform": null,
+  "fabrication_released": false
+}
