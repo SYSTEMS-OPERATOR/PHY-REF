@@ -28,6 +28,12 @@ jobs:
         run: |
           git lfs install --local
           python tools/acquire_nih.py --all
+      - name: Original-surface review reconstruction and tamper checks
+        env:
+          PHY_PELVIS_ORIGINAL: assets/nih/originals/VH_F_Pelvis.glb
+        run: |
+          python -m unittest discover -s tests -v
+          python tools/validate_original_review.py --original "$PHY_PELVIS_ORIGINAL"
       - name: Independently check hashes and static geometry
         run: |
           python tools/audit_assets.py --output /tmp/phy-ref-audits
